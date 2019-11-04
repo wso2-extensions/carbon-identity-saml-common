@@ -35,6 +35,7 @@ public class SAMLInitializer {
 
     /**
      * Initializes the required initializers.
+     *
      * @throws InitializationException if initialization is unsuccessful
      */
     public static void doBootstrap() throws InitializationException {

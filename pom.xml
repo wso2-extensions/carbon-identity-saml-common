@@ -132,6 +132,7 @@
     <properties>
         <org.opensaml.version>3.3.1.wso2v1</org.opensaml.version>
         <opensaml2.wso2.osgi.version.range>[3.3.1,4.0.0)</opensaml2.wso2.osgi.version.range>
+        <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
     </properties>
 
     <build>

@@ -75,12 +75,9 @@
                             org.apache.commons.lang; version="${commons-lang.wso2.osgi.version.range}",
                             org.apache.commons.logging; version="${import.package.version.commons.logging}",
                             org.apache.xml.security.utils; version="${wss4j.xml.security.imp.pkg.version.range}",
-
                             org.opensaml.*; version="${opensaml2.wso2.osgi.version.range}",
-
                             org.w3c.dom,
                             org.xml.sax,
-
                             javax.xml.parsers; version="${javax.xml.parsers.import.pkg.version}",
                         </Import-Package>
                         <Export-Package>

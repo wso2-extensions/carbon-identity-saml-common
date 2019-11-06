@@ -31,6 +31,7 @@ import org.opensaml.core.xml.io.UnmarshallingException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.wso2.carbon.identity.saml.common.util.exception.IdentityUnmarshallingException;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -57,9 +58,9 @@ public class UnmarshallUtils {
      *
      * @param xmlString Decoded SAML or XACML String.
      * @return SAML or XACML Object.
-     * @throws UnmarshallingException if an XMLObject is not constructable.
+     * @throws IdentityUnmarshallingException if an XMLObject is not constructable.
      */
-    public static XMLObject unmarshall(String xmlString) throws UnmarshallingException {
+    public static XMLObject unmarshall(String xmlString) throws IdentityUnmarshallingException {
 
         try {
             DocumentBuilderFactory documentBuilderFactory = getSecuredDocumentBuilderFactory();
@@ -75,7 +76,7 @@ public class UnmarshallUtils {
             return unmarshaller.unmarshall(element);
         } catch (ParserConfigurationException | UnmarshallingException | SAXException | IOException e) {
             String message = "Error in constructing XML Object from the encoded String";
-            throw new UnmarshallingException(message, e);
+            throw new IdentityUnmarshallingException(message, e);
         }
     }
 

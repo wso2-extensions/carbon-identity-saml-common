@@ -19,7 +19,7 @@
     <parent>
         <artifactId>carbon-identity-saml-common</artifactId>
         <groupId>org.wso2.carbon.identity.saml.common</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 

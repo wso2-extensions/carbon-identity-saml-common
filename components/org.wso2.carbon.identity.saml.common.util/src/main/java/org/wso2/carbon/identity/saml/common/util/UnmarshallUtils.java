@@ -56,8 +56,8 @@ public class UnmarshallUtils {
     /**
      * Constructing the SAML or XACML Objects from a String.
      *
-     * @param xmlString Decoded SAML or XACML String.
-     * @return SAML or XACML Object.
+     * @param xmlString Decoded SAML or XACML String
+     * @return SAML or XACML Object
      * @throws IdentityUnmarshallingException if an XMLObject is not constructable.
      */
     public static XMLObject unmarshall(String xmlString) throws IdentityUnmarshallingException {

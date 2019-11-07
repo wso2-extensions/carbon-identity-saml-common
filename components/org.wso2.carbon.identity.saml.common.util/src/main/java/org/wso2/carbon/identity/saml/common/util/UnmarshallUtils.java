@@ -46,7 +46,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 /**
- * TODO - Add description for the class
+ * Utils class for unmarshalling operations.
  */
 public class UnmarshallUtils {
 
@@ -84,7 +84,7 @@ public class UnmarshallUtils {
      * Return whether SAML Assertion has the canonicalization method.
      * set to 'http://www.w3.org/2001/10/xml-exc-c14n#WithComments'.
      *
-     * @param document Document which contains the SAML Assertion.
+     * @param document Document which contains the SAML Assertion
      * @return true if canonicalization method equals to 'http://www.w3.org/2001/10/xml-exc-c14n#WithComments'.
      */
     private static boolean isSignedWithComments(Document document) {
@@ -122,7 +122,7 @@ public class UnmarshallUtils {
     /**
      *
      * @param documentBuilderFactory contains parsers that produces DOM Objects.
-     * @param samlString string containing the SAML Assertion.
+     * @param samlString string containing the SAML Assertion
      * @return
      * @throws IOException if there is a failure in input operation.
      * @throws SAXException if there is a failure in parsing.
@@ -139,7 +139,7 @@ public class UnmarshallUtils {
     /**
      * Create DocumentBuilderFactory with the XXE and XEE prevention measurements.
      *
-     * @return DocumentBuilderFactory instance.
+     * @return DocumentBuilderFactory instance
      */
     public static DocumentBuilderFactory getSecuredDocumentBuilderFactory() {
 

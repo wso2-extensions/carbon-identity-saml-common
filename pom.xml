@@ -42,6 +42,7 @@
 
     <modules>
         <module>components/org.wso2.carbon.identity.saml.common.util</module>
+        <module>features/org.wso2.carbon.identity.saml.common.util</module>
     </modules>
 
     <repositories>

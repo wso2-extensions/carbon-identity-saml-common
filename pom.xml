@@ -41,6 +41,7 @@
 
     <modules>
         <module>components/org.wso2.carbon.identity.saml.common.util</module>
+        <module>features/org.wso2.carbon.identity.saml.common.util</module>
     </modules>
 
     <repositories>
@@ -121,6 +122,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.wso2.carbon.identity.saml.common</groupId>
+                <artifactId>org.wso2.carbon.identity.saml.common.util</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.wso2.carbon</groupId>
                 <artifactId>org.wso2.carbon.core</artifactId>
                 <version>${carbon.kernel.version}</version>
@@ -198,6 +204,7 @@
         <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
         <org.powermock.version>1.7.4</org.powermock.version>
 
+        <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
         <opensaml2.wso2.osgi.version.range>[3.3.1,4.0.0)</opensaml2.wso2.osgi.version.range>
         <osgi.framework.imp.pkg.version.range>[1.7.0, 2.0.0)</osgi.framework.imp.pkg.version.range>
         <osgi.service.component.imp.pkg.version.range>[1.2.0, 2.0.0)</osgi.service.component.imp.pkg.version.range>

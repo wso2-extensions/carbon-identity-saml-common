@@ -20,8 +20,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>carbon-identity-saml-common</artifactId>
         <groupId>org.wso2.carbon.identity.saml.common</groupId>
+        <artifactId>carbon-identity-saml-common</artifactId>
         <relativePath>../../pom.xml</relativePath>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -55,13 +55,16 @@
                             <goal>p2-feature-gen</goal>
                         </goals>
                         <configuration>
-                            <id>org.wso2.carbon.identity.idp.metadata.saml2.server</id>
+                            <id>org.wso2.carbon.identity.saml.common.util.server</id>
                             <propertiesFile>../etc/feature.properties</propertiesFile>
                             <bundles>
                                 <bundleDef>
                                     org.wso2.carbon.identity.saml.common:org.wso2.carbon.identity.saml.common.util
                                 </bundleDef>
                             </bundles>
+                            <importFeatures>
+                                <importFeatureDef>org.wso2.carbon.core:compatible:${carbon.kernel.version}</importFeatureDef>
+                            </importFeatures>
                         </configuration>
                     </execution>
                 </executions>

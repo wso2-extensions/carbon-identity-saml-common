@@ -75,6 +75,10 @@ public class SAMLInitializer {
             GlobalAlgorithmRegistryInitializer globalAlgorithmRegistryInitializer = new GlobalAlgorithmRegistryInitializer();
             globalAlgorithmRegistryInitializer.init();
 
+            org.opensaml.soap.config.XMLObjectProviderInitializer soapXMLObjectProviderInitializer = new org.opensaml
+                    .soap.config.XMLObjectProviderInitializer();
+            soapXMLObjectProviderInitializer.init();
+
         } finally {
             thread.setContextClassLoader(originalClassLoader);
         }

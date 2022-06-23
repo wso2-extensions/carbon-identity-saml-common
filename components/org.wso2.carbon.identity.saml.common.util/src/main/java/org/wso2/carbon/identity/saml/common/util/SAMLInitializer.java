@@ -79,6 +79,14 @@ public class SAMLInitializer {
                     .soap.config.XMLObjectProviderInitializer();
             soapXMLObjectProviderInitializer.init();
 
+            org.opensaml.xacml.profile.saml.config.XMLObjectProviderInitializer xacmlProfileXMLObjectProviderInitializer = new
+                    org.opensaml.xacml.profile.saml.config.XMLObjectProviderInitializer();
+            xacmlProfileXMLObjectProviderInitializer.init();
+
+            org.opensaml.xacml.config.XMLObjectProviderInitializer xacmlXMLObjectProviderInitializer = new
+                    org.opensaml.xacml.config.XMLObjectProviderInitializer();
+            xacmlXMLObjectProviderInitializer.init();
+
         } finally {
             thread.setContextClassLoader(originalClassLoader);
         }

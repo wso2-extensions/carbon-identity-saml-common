@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.carbon.identity.saml.common</groupId>
     <artifactId>carbon-identity-saml-common</artifactId>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>1.3.0</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon SAML Common</name>
     <url>http://wso2.org</url>
@@ -36,7 +36,7 @@
         <developerConnection>scm:git:https://github.com/wso2-extensions/carbon-identity-saml-common.git
         </developerConnection>
         <connection>scm:git:https://github.com/wso2-extensions/carbon-identity-saml-common.git</connection>
-        <tag>HEAD</tag>
+        <tag>v1.3.0</tag>
     </scm>
 
     <modules>

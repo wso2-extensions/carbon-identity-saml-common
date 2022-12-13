@@ -98,41 +98,71 @@
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-testng</artifactId>
-                <version>${org.powermock.version}</version>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-mockito</artifactId>
-                <version>${org.powermock.version}</version>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-testng-common</artifactId>
-                <version>${org.powermock.version}</version>
+                <version>${powermock.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <!-- for Java 17 Compatibility -->
+            <dependency>
+                <groupId>com.sun.xml.ws</groupId>
+                <artifactId>jaxws-ri</artifactId>
+                <version>${jaxws-ri.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.parsers</groupId>
+                <artifactId>jaxp-ri</artifactId>
+                <version>${jaxp-ri.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity.framework</groupId>
+                <artifactId>org.wso2.carbon.identity.testutil</artifactId>
+                <scope>test</scope>
+                <version>${carbon.identity.framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xerces</groupId>
+                <artifactId>xercesImpl</artifactId>
+                <version>${xercesImpl.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
     <properties>
-        <org.opensaml.version>3.3.1.wso2v1</org.opensaml.version>
-        <carbon.kernel.version>4.5.0</carbon.kernel.version>
+        <org.opensaml.version>4.0.1.wso2v1</org.opensaml.version>
+        <carbon.kernel.version>4.7.1</carbon.kernel.version>
         <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
 
         <google.guava.version>29.0-jre</google.guava.version>
         <wss4j.version>1.5.11-wso2v18</wss4j.version>
 
         <!-- Unit test versions -->
-        <testng.version>6.9.10</testng.version>
-        <jacoco.version>0.8.2</jacoco.version>
+        <testng.version>7.0.0</testng.version>
+        <jacoco.version>0.8.4</jacoco.version>
         <jmockit.version>1.44</jmockit.version>
+        <powermock.version>2.0.2</powermock.version>
+        <slf4j.api.version>1.7.21</slf4j.api.version>
         <maven.surefire.plugin.version>2.22.0</maven.surefire.plugin.version>
-        <org.powermock.version>1.7.4</org.powermock.version>
+        <mockito.version>2.23.4</mockito.version>
+        <jaxws-ri.version>2.3.2</jaxws-ri.version>
+        <jaxp-ri.version>1.4.5</jaxp-ri.version>
+        <xercesImpl.version>2.12.2</xercesImpl.version>
 
         <carbon.p2.plugin.version>1.5.3</carbon.p2.plugin.version>
-        <opensaml2.wso2.osgi.version.range>[3.3.1,4.0.0)</opensaml2.wso2.osgi.version.range>
+        <opensaml2.wso2.osgi.version.range>[4.0.1,4.1.0)</opensaml2.wso2.osgi.version.range>
         <osgi.framework.imp.pkg.version.range>[1.7.0, 2.0.0)</osgi.framework.imp.pkg.version.range>
         <osgi.service.component.imp.pkg.version.range>[1.2.0, 2.0.0)</osgi.service.component.imp.pkg.version.range>
         <commons-lang.wso2.osgi.version.range>[2.6.0,3.0.0)</commons-lang.wso2.osgi.version.range>

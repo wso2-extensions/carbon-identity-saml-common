@@ -20,12 +20,12 @@ package org.wso2.carbon.identity.saml.common.util;
 
 import org.opensaml.core.config.InitializationException;
 import org.opensaml.core.config.InitializationService;
-import org.opensaml.saml.config.SAMLConfigurationInitializer;
 import org.opensaml.core.xml.config.GlobalParserPoolInitializer;
-import org.opensaml.xmlsec.config.JavaCryptoValidationInitializer;
-import org.opensaml.xmlsec.config.ApacheXMLSecurityInitializer;
-import org.opensaml.xmlsec.config.GlobalSecurityConfigurationInitializer;
+import org.opensaml.saml.config.impl.SAMLConfigurationInitializer;
 import org.opensaml.xmlsec.config.GlobalAlgorithmRegistryInitializer;
+import org.opensaml.xmlsec.config.impl.ApacheXMLSecurityInitializer;
+import org.opensaml.xmlsec.config.impl.GlobalSecurityConfigurationInitializer;
+import org.opensaml.xmlsec.config.impl.JavaCryptoValidationInitializer;
 
 /**
  * Initializes the OpenSAML 3 library at a central location to ensure that it is
@@ -51,10 +51,12 @@ public class SAMLInitializer {
             SAMLConfigurationInitializer samlConfigurationInitializer = new SAMLConfigurationInitializer();
             samlConfigurationInitializer.init();
 
-            org.opensaml.saml.config.XMLObjectProviderInitializer samlXMLObjectProviderInitializer = new org.opensaml.saml.config.XMLObjectProviderInitializer();
+            org.opensaml.saml.config.impl.XMLObjectProviderInitializer samlXMLObjectProviderInitializer =
+                    new org.opensaml.saml.config.impl.XMLObjectProviderInitializer();
             samlXMLObjectProviderInitializer.init();
 
-            org.opensaml.core.xml.config.XMLObjectProviderInitializer coreXMLObjectProviderInitializer = new org.opensaml.core.xml.config.XMLObjectProviderInitializer();
+            org.opensaml.core.xml.config.XMLObjectProviderInitializer coreXMLObjectProviderInitializer =
+                    new org.opensaml.core.xml.config.XMLObjectProviderInitializer();
             coreXMLObjectProviderInitializer.init();
 
             GlobalParserPoolInitializer globalParserPoolInitializer = new GlobalParserPoolInitializer();
@@ -63,28 +65,32 @@ public class SAMLInitializer {
             JavaCryptoValidationInitializer javaCryptoValidationInitializer = new JavaCryptoValidationInitializer();
             javaCryptoValidationInitializer.init();
 
-            org.opensaml.xmlsec.config.XMLObjectProviderInitializer xmlsecXMLObjectProviderInitializer = new org.opensaml.xmlsec.config.XMLObjectProviderInitializer();
+            org.opensaml.xmlsec.config.impl.XMLObjectProviderInitializer xmlsecXMLObjectProviderInitializer =
+                    new org.opensaml.xmlsec.config.impl.XMLObjectProviderInitializer();
             xmlsecXMLObjectProviderInitializer.init();
 
             ApacheXMLSecurityInitializer apacheXMLSecurityInitializer = new ApacheXMLSecurityInitializer();
             apacheXMLSecurityInitializer.init();
 
-            GlobalSecurityConfigurationInitializer globalSecurityConfigurationInitializer = new GlobalSecurityConfigurationInitializer();
+            GlobalSecurityConfigurationInitializer globalSecurityConfigurationInitializer =
+                    new GlobalSecurityConfigurationInitializer();
             globalSecurityConfigurationInitializer.init();
 
-            GlobalAlgorithmRegistryInitializer globalAlgorithmRegistryInitializer = new GlobalAlgorithmRegistryInitializer();
+            GlobalAlgorithmRegistryInitializer globalAlgorithmRegistryInitializer =
+                    new GlobalAlgorithmRegistryInitializer();
             globalAlgorithmRegistryInitializer.init();
 
-            org.opensaml.soap.config.XMLObjectProviderInitializer soapXMLObjectProviderInitializer = new org.opensaml
-                    .soap.config.XMLObjectProviderInitializer();
+            org.opensaml.soap.config.impl.XMLObjectProviderInitializer soapXMLObjectProviderInitializer =
+                    new org.opensaml.soap.config.impl.XMLObjectProviderInitializer();
             soapXMLObjectProviderInitializer.init();
 
-            org.opensaml.xacml.profile.saml.config.XMLObjectProviderInitializer xacmlProfileXMLObjectProviderInitializer = new
-                    org.opensaml.xacml.profile.saml.config.XMLObjectProviderInitializer();
+            org.opensaml.xacml.profile.saml.config.impl.XMLObjectProviderInitializer
+                    xacmlProfileXMLObjectProviderInitializer =
+                    new org.opensaml.xacml.profile.saml.config.impl.XMLObjectProviderInitializer();
             xacmlProfileXMLObjectProviderInitializer.init();
 
-            org.opensaml.xacml.config.XMLObjectProviderInitializer xacmlXMLObjectProviderInitializer = new
-                    org.opensaml.xacml.config.XMLObjectProviderInitializer();
+            org.opensaml.xacml.config.impl.XMLObjectProviderInitializer xacmlXMLObjectProviderInitializer =
+                    new org.opensaml.xacml.config.impl.XMLObjectProviderInitializer();
             xacmlXMLObjectProviderInitializer.init();
 
         } finally {

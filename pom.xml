@@ -36,7 +36,7 @@
         <developerConnection>scm:git:https://github.com/wso2-extensions/carbon-identity-saml-common.git
         </developerConnection>
         <connection>scm:git:https://github.com/wso2-extensions/carbon-identity-saml-common.git</connection>
-        <tag>v1.3.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <modules>

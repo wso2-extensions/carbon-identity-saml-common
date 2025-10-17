@@ -20,17 +20,11 @@ package org.wso2.carbon.identity.saml.common.util;
 
 import org.opensaml.core.config.InitializationException;
 import org.opensaml.core.xml.XMLObject;
-import org.opensaml.core.xml.config.XMLObjectProviderRegistrySupport;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-@PrepareForTest({XMLObjectProviderRegistrySupport.class})
-@PowerMockIgnore({"javax.net.*", "javax.security.*", "javax.crypto.*", "javax.xml.*", "org.xml.sax.*", "org.w3c.dom" +
-        ".*", "org.apache.xerces.*"})
 public class UnmarshallUtilsTest {
 
     @BeforeMethod

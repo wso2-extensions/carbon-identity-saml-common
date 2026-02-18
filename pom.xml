@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.carbon.identity.saml.common</groupId>
     <artifactId>carbon-identity-saml-common</artifactId>
-    <version>1.4.4-SNAPSHOT</version>
+    <version>1.6.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon SAML Common</name>
     <url>http://wso2.org</url>

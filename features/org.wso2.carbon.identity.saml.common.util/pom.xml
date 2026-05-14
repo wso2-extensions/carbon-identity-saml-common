@@ -21,7 +21,7 @@
         <groupId>org.wso2.carbon.identity.saml.common</groupId>
         <artifactId>carbon-identity-saml-common</artifactId>
         <relativePath>../../pom.xml</relativePath>
-        <version>999.999.999</version>
+        <version>9991.7.2-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
